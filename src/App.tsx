@@ -1,7 +1,12 @@
+import { Helmet } from "react-helmet-async";
+import { RouterProvider } from "react-router-dom";
+import { router } from "./Routes";
+
 export function App() {
     return (
-        <div className="bg-mint-500">
-            <h1 className="text-3xl font-bold underline color-mint-500">Hello world!</h1>
-        </div>
+        <>
+            <Helmet titleTemplate="%s | Júlia App" />
+            <RouterProvider router={router} />
+        </>
     );
 }
